@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using NUnit.Framework;
 
 namespace PongServer.Tests
@@ -13,6 +14,17 @@ namespace PongServer.Tests
 		}
 
 		private Database database;
+
+		[Test]
+		public void PlayingAroundWithLinq()
+		{
+			var list = new int[] { 1, 2, 5, 7 };
+			var query =
+				from number in list
+				where number >= 5
+				select number.ToString();
+			Assert.That(query.First(), Is.EqualTo("5"));
+		}
 
 		[TestCase("User1")]
 		[TestCase("User2")]

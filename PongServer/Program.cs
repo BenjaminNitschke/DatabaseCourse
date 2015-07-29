@@ -102,19 +102,24 @@ namespace PongServer
 				LeftPlayer = server.clients[LeftPlayerIndex].Points,
 				RightPlayer = server.clients[RightPlayerIndex].Points
 			});
-			if (server.clients[LeftPlayerIndex].Points % 5 == 0)
-				lock (database)
-					database.SaveScoreForPlayer(server.clients[LeftPlayerIndex].EndPoint.ToString(),
-						server.clients[LeftPlayerIndex].Points);
-			if (server.clients[RightPlayerIndex].Points % 5 == 0)
-				lock (database)
-					database.SaveScoreForPlayer(server.clients[RightPlayerIndex].EndPoint.ToString(),
-						server.clients[RightPlayerIndex].Points);
+			SaveScoreInDatabase(LeftPlayerIndex);
+			SaveScoreInDatabase(RightPlayerIndex);
 			ballX = 0;
 			ballY = 0;
 			var random = new Random((int) DateTime.Now.Ticks);
 			ballVelocityX = (random.Next(2) == 0 ? -1 : +1)*Constants.DefaultBallVelocityX;
 			ballVelocityY = (random.Next(2) == 0 ? -1 : +1)*Constants.DefaultBallVelocityY;
+		}
+
+		private static void SaveScoreInDatabase(int playerIndex)
+		{
+			new Thread(() =>
+			{
+				if (server.clients[playerIndex].Points % 5 == 0)
+					lock (database)
+						database.SaveScoreForPlayer(server.clients[playerIndex].EndPoint.ToString(),
+							server.clients[playerIndex].Points);
+			}).Start();
 		}
 
 		private static void SendToAllPlayers(Message message)

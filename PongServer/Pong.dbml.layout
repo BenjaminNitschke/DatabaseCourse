@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Pong">
+  <DataContextMoniker Name="/PongDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c8502436-b882-4371-b55b-0441dbbf5d7d" absoluteBounds="3.5, 3.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/PongDataContext/Player" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b17e106-48eb-48b9-b9de-22189e2ca8c9" absoluteBounds="3.5149999999999997, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a21b26f-8860-4219-b8b1-eade165dcf45" absoluteBounds="2, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PongDataContext/HighScore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e7167c8-b498-4bc6-81f1-e342a4b21f28" absoluteBounds="2.015, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 3.625); (3.75 : 2.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PongDataContext/Player/Player_HighScore" />
+      <nodes>
+        <classShapeMoniker Id="c8502436-b882-4371-b55b-0441dbbf5d7d" />
+        <classShapeMoniker Id="7a21b26f-8860-4219-b8b1-eade165dcf45" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="da341d75-3ea5-4ce0-959d-143ea62b97de" absoluteBounds="4.875, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PongDataContext/Game" />
+      <nestedChildShapes>
+        <elementListCompartment Id="677e6c59-7ca9-4439-b9b2-70dcc5983c61" absoluteBounds="4.89, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.1875 : 3.625); (5.1875 : 2.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PongDataContext/Player/Player_Game" />
+      <nodes>
+        <classShapeMoniker Id="c8502436-b882-4371-b55b-0441dbbf5d7d" />
+        <classShapeMoniker Id="da341d75-3ea5-4ce0-959d-143ea62b97de" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
