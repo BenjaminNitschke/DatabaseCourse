@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PongDatabase
+namespace PongDatabase.Linq
 {
-	public class Database
+	public class LinqDatabase
 	{
-		public Database()
+		public LinqDatabase()
 		{
 			data = new PongDataContext();
 		}

@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PongDatabase
+namespace PongDatabase.Linq
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

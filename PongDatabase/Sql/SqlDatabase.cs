@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 
-namespace PongServer
+namespace PongDatabase.Sql
 {
 	public class SqlDatabase
 	{

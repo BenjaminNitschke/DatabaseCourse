@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
+using PongDatabase.Mongo;
 
 namespace PongDatabase.Tests
 {
@@ -38,7 +39,7 @@ namespace PongDatabase.Tests
 		[Test]
 		public void CheckIfPlayerExists()
 		{
-			Assert.That(database.GetPlayerId("User1"), Is.Not.EqualTo(0));
+			Assert.That(database.GetPlayer("User1"), Is.Not.Null);
 		}
 
 		[Test]

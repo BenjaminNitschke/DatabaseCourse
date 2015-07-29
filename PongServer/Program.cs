@@ -3,6 +3,7 @@ using PongMessages;
 using System;
 using System.Threading;
 using PongDatabase;
+using PongDatabase.Mongo;
 
 namespace PongServer
 {
