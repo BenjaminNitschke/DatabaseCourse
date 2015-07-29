@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PongServer
+namespace PongDatabase
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -42,7 +42,7 @@ namespace PongServer
     #endregion
 		
 		public PongDataContext() : 
-				base(global::PongServer.Properties.Settings.Default.PongConnectionString, mappingSource)
+				base(global::PongDatabase.Properties.Settings.Default.PongConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

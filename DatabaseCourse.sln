@@ -13,7 +13,32 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongServer", "PongServer\Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongMessages", "PongMessages\PongMessages.csproj", "{630AAA6E-B7A8-4C0A-BB91-0E2E098FF8E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongServer.Tests", "PongServer\Tests\PongServer.Tests.csproj", "{6BE70E3E-C75C-4D97-B8AA-731C55A841AC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PongWebsite", "PongWebsite\", "{5DA98FF2-67A9-45C5-9FA5-807F7F3213B6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{48683f08-f883-44b6-b2ad-59cb2ee73f03}|PongDatabase.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51796"
+		Debug.AspNetCompiler.PhysicalPath = "PongWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51796\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51796"
+		Release.AspNetCompiler.PhysicalPath = "PongWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51796\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51796"
+		SlnRelativePath = "PongWebsite\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongDatabase", "PongDatabase\PongDatabase.csproj", "{48683F08-F883-44B6-B2AD-59CB2EE73F03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongDatabase.Tests", "PongDatabase\Tests\PongDatabase.Tests.csproj", "{61D90000-E768-4CB8-A177-877CA9652600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +66,18 @@ Global
 		{630AAA6E-B7A8-4C0A-BB91-0E2E098FF8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{630AAA6E-B7A8-4C0A-BB91-0E2E098FF8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{630AAA6E-B7A8-4C0A-BB91-0E2E098FF8E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BE70E3E-C75C-4D97-B8AA-731C55A841AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BE70E3E-C75C-4D97-B8AA-731C55A841AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BE70E3E-C75C-4D97-B8AA-731C55A841AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BE70E3E-C75C-4D97-B8AA-731C55A841AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA98FF2-67A9-45C5-9FA5-807F7F3213B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA98FF2-67A9-45C5-9FA5-807F7F3213B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA98FF2-67A9-45C5-9FA5-807F7F3213B6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA98FF2-67A9-45C5-9FA5-807F7F3213B6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{48683F08-F883-44B6-B2AD-59CB2EE73F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48683F08-F883-44B6-B2AD-59CB2EE73F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48683F08-F883-44B6-B2AD-59CB2EE73F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48683F08-F883-44B6-B2AD-59CB2EE73F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D90000-E768-4CB8-A177-877CA9652600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D90000-E768-4CB8-A177-877CA9652600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D90000-E768-4CB8-A177-877CA9652600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D90000-E768-4CB8-A177-877CA9652600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

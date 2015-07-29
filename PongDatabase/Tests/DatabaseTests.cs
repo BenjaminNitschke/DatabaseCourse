@@ -2,7 +2,7 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace PongServer.Tests
+namespace PongDatabase.Tests
 {
 	public class DatabaseTests
 	{

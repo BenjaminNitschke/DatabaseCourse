@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Pong" Class="PongDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Pong;Persist Security Info=True;User ID=Pong" SettingsObjectName="PongServer.Properties.Settings" SettingsPropertyName="PongConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Pong;Persist Security Info=True;User ID=Pong" SettingsObjectName="PongDatabase.Properties.Settings" SettingsPropertyName="PongConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Player" Member="Players">
     <Type Name="Player">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
