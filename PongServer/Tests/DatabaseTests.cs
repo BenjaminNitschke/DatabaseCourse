@@ -1,0 +1,45 @@
+﻿using System;
+using NUnit.Framework;
+
+namespace PongServer.Tests
+{
+	public class DatabaseTests
+	{
+		[SetUp]
+		public void ConnectionToDatabase()
+		{
+			database = new Database();
+			Assert.That(database.IsConnected, Is.True);
+		}
+
+		private Database database;
+
+		[TestCase("User1")]
+		[TestCase("User2")]
+		public void LoginPlayer(string username)
+		{
+			database.LoginPlayer(username);
+			Assert.That(database.GetUserLastLogin(username),
+				Is.GreaterThan(DateTime.UtcNow.AddSeconds(-0.2f)));
+		}
+
+		[Test]
+		public void CheckIfPlayerExists()
+		{
+			Assert.That(database.GetPlayerId("User1"), Is.Not.EqualTo(0));
+		}
+
+		[Test]
+		public void SaveScoreAtEndOfGame()
+		{
+			database.SaveScoreForPlayer("User1", 10);
+			database.SaveScoreForPlayer("User2", 6);
+			database.SaveScoreForPlayer("User2", 8);
+			database.SaveScoreForPlayer("User2", 4);
+			int rankUser1, rankUser2;
+			Assert.That(database.GetUserHighScore("User1", out rankUser1), Is.EqualTo(10));
+			Assert.That(database.GetUserHighScore("User2", out rankUser2), Is.EqualTo(8));
+			Assert.That(rankUser1, Is.LessThan(rankUser2));
+		}
+	}
+}
